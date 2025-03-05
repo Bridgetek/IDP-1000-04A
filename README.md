@@ -7,6 +7,7 @@ IDP2040-101A   is a development module, powered by Raspberry Pi RP2040 microcont
 *  RS-485 transceiver
 *  10.1-inch round LCD (1280x800 pixels)
 
+![image](https://github.com/user-attachments/assets/a44e468d-324e-4bbe-ab25-6fc0add3ba0c)
 
 
 
