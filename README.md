@@ -12,8 +12,9 @@ IDP2040-101A   is a development module, powered by Raspberry Pi RP2040 microcont
 
 
 Here are the folder structure :  
-
-* Docs : documentation, including the datasheet of the IDP2040-101A  module. 
+* Docs : documentation, including the datasheet, which contains hardware specification.
+* Default firmware:  The source code and binary which is shipped with the product.
+* BSP (Board Support Package) :  To Be Updated  
 
 
 ## IDE support for GUI application development  
