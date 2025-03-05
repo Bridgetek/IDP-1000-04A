@@ -1,0 +1,26 @@
+# IDP2040-101A  
+
+
+The repo contains all the development support information for Bridgetek [IDP2040-101A](https://brtchip.com/product/idp2040-101A/) platform. 
+
+IDP2040-101A   is a development module, powered by Raspberry Pi RP2040 microcontroller with BT817 and integrated with:
+*  RS-485 transceiver
+*  10.1-inch round LCD (1280x800 pixels)
+
+
+
+
+Here are the folder structure :  
+
+* Docs : documentation, including the datasheet of the IDP2040-101A  module. 
+
+
+## IDE support for GUI application development  
+
+Bridgetek offers a comprehensive IDE tool, **EVE Screen Designer (ESD)**, to streamline GUI application development for the **IDM2040-21R**.  
+
+Starting from **ESD 4.19.6**, the **IDM2040-21R** is supported as a native platform. You can download ESD from: [https://brtchip.com/esd/](https://brtchip.com/esd/).  
+
+
+![image](https://github.com/user-attachments/assets/573c2c9b-e62f-4c92-a8d8-4794c39f6878)
+
