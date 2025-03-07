@@ -21,7 +21,7 @@ Here are the folder structure :
 
 Bridgetek offers a comprehensive IDE tool, **EVE Screen Designer (ESD)**, to streamline GUI application development for the **IDM2040-21R**.  
 
-Starting from **ESD 4.19.6**, the **IDM2040-21R** is supported as a native platform. You can download ESD from: [https://brtchip.com/esd/](https://brtchip.com/esd/).  
+Starting from **ESD 4.19.6**, the **IDM2040-101A** is supported as a native platform. You can download ESD from: [https://brtchip.com/esd/](https://brtchip.com/esd/).  
 
 
 ![image](https://github.com/user-attachments/assets/573c2c9b-e62f-4c92-a8d8-4794c39f6878)
