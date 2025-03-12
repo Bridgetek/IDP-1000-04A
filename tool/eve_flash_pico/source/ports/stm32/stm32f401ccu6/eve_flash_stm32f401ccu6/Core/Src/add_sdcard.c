@@ -1,0 +1,3 @@
+void sdcard_init(){
+
+}
