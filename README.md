@@ -1,7 +1,7 @@
-# IDP2040-101A  
+# IDP-1000-04A
 
 
-The repo contains all the development support information for Bridgetek [IDP2040-101A](https://brtchip.com/product/IDP-1000-04A/) platform. 
+The repo contains all the development support information for Bridgetek [IDP-1000-04A](https://brtchip.com/product/IDP-1000-04A/) platform. 
 
 IDP-1000-04A is a development module, powered by Raspberry Pi RP2040 microcontroller with BT817 and integrated with:
 *  RS-485 transceiver
