@@ -19,7 +19,7 @@ Here are the folder structure :
 
 ## IDE support for GUI application development  
 
-Bridgetek offers a comprehensive IDE tool, **EVE Screen Designer (ESD)**, to streamline GUI application development for the **IDP-1000-04A **.  
+Bridgetek offers a comprehensive IDE tool, **EVE Screen Designer (ESD)**, to streamline GUI application development for the **IDP-1000-04A**.  
 
 Starting from **ESD 4.19.6**, the **IDP-1000-04A** is supported as a native platform. You can download ESD from: [https://brtchip.com/esd/](https://brtchip.com/esd/).  
 
