@@ -46,7 +46,7 @@ include(${PICO_SDK_INIT_CMAKE_FILE})
 # Initialise the Pico SDK
 pico_sdk_init()
 
-SET(ProjectId "IDP2040_101A" CACHE STRING "Binary prefix name")
+SET(ProjectId "IDP-1000-04A" CACHE STRING "Binary prefix name")
 project(${ProjectId} C CXX ASM)
 MESSAGE(STATUS "Configuring target: ${ProjectId}")
 
