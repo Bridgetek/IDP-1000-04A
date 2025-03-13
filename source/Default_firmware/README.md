@@ -44,14 +44,14 @@ Below diagram describe how this folder used in the program:
                 -------------------------------------------
 
 # Usage
-IDP2040-101A is using EVE BT817 with Raspberry Pi Pico RP2040 host platform. Users are expected to be familiar with the BT81X programming guide and data sheet for EVE BT817 chip.
+**IDP-1000-04A** is using EVE BT817 with Raspberry Pi Pico RP2040 host platform. Users are expected to be familiar with the BT81X programming guide and data sheet for EVE BT817 chip.
 
 ## Hardware requirement
 * USB cable
 * power supply
-* IDP2040-101A development board
+* IDP-1000-04A development board
 
-![IDP2040-101A](https://github.com/user-attachments/assets/87c11c64-84f7-4b9f-b9e7-034e60a9175f)
+![IDP-1000-04A](https://github.com/user-attachments/assets/87c11c64-84f7-4b9f-b9e7-034e60a9175f)
 
 ## Software requirement
 * This folder does not include Pico toolchain. For information on downloading, installing, and using the toolchain, please visit https://github.com/raspberrypi/pico-setup-windows. This folder used toolchain version is 1.5.1.
@@ -68,7 +68,7 @@ cd Default_firmware
 mkdir build
 cd build
 [path to cmake] -D PICO_DEFAULT_BOOT_STAGE2:STRING=boot2_generic_03h -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Debug ..
-nmake IDP2040_101A
+nmake IDP-1000-04A
 ```
 2. .uf file will be generated in __build__ folder
 
