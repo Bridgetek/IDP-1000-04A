@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<_ThemeDocument _uuid="{4f05419f-0223-46b2-8f02-b400ad699226}" _name="Theme" _locked="false">
+    <__Properties>
+        <Category type="String"></Category>
+        <ClearColor type="String">#212121</ClearColor>
+        <BackColor type="String">#151515</BackColor>
+        <TextColor type="String">#FFFFFF</TextColor>
+        <ButtonTextColor type="String">#FFFFFF</ButtonTextColor>
+        <DefaultColor type="String">#6B6B6B</DefaultColor>
+        <PrimaryColor type="String">#FF7F3F</PrimaryColor>
+    </__Properties>
+</_ThemeDocument>
