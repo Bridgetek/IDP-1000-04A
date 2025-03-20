@@ -4,7 +4,7 @@
 
 # Folder introduction
 ```
-📂 smart_home_control_hub_app
+📂 ImageSlideShow
     ├───Data                           | Contains all the Bitmap files
     ├───Esd_Core                       | The application core files
     ├───FT_Esd_Framework               | The application framework files
