@@ -10,10 +10,10 @@
     ├───FT_Esd_Framework               | The application framework files
     ├───FT_Esd_Widgets                 | The widget files
     ├───FT_Eve_Hal                     | Hardware Abstraction layer for interfacing the RP2040 platform with EVE control support
-    ├───ImageSlide		               | The application specific source code
+    ├───ImageSlide                     | The application specific source code
     ├───ThirdPartyLib                  | Third party library
     ├───CMakeLists.txt                 | Cmake file
-    ├───pico_build.bat		           | Shell script run command
+    ├───pico_build.bat                 | Shell script run command
     ├───pico_sdk_import.cmake          | SDK import file from pico
 ```
 # Usage
