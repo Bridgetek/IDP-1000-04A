@@ -10,10 +10,10 @@
     ├───FT_Esd_Framework               | The application framework files
     ├───FT_Esd_Widgets                 | The widget files
     ├───FT_Eve_Hal                     | Hardware Abstraction layer for interfacing the RP2040 platform with EVE control support
-    ├───ImageSlide		       | The application specific source code
+    ├───ImageSlide		               | The application specific source code
     ├───ThirdPartyLib                  | Third party library
     ├───CMakeLists.txt                 | Cmake file
-    ├───pico_build.bat		       | Shell script run command
+    ├───pico_build.bat		           | Shell script run command
     ├───pico_sdk_import.cmake          | SDK import file from pico
 ```
 # Usage
@@ -35,7 +35,7 @@
 
 ## Build instruction
 1. Execute the pico_build.bat file from the command line or double-click it to run directly.
-2. SmartHomeControlHub.uf file will be generated in **build** folder
+2. ImageSlide.uf file will be generated in **build** folder
 
 ## Program
 1. While holding the **BOOTSEL** button, connect the board to computer via the USB cable, or alternatively, press the **RESET** button while holding the **BOOTSEL** button, then release the **RESET** button.
