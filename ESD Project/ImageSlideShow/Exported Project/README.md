@@ -5,7 +5,7 @@
 # Folder introduction
 ```
 📂 ImageSlideShow
-    ├───Data                           | Contains all the Bitmap files
+    ├───Data                           | Contains all the data files
     ├───Esd_Core                       | The application core files
     ├───FT_Esd_Framework               | The application framework files
     ├───FT_Esd_Widgets                 | The widget files
@@ -24,7 +24,7 @@
 * power supply
 * SD card 
 
-
+Copy all files from the Data folder to the SD card, then insert the SD card into the IDP-1000-04A hardware.
 
 
 ## Software requirement
