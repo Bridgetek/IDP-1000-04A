@@ -12,10 +12,6 @@
 #include <stdbool.h>
 
 #define MAX_RGB_LEDS 12
-#define RGB_LED_ON	 0x08
-#define RGB_LED_OFF	 0x00
-
-extern int ktd_led_pos;
 
 typedef enum {
 	color_reg_bank_0 = 0x03,
@@ -52,9 +48,6 @@ void kinetic_rgb_led_update(uint8_t *led, uint8_t ledno, uint8_t color, KineticS
 void kinetic_rgb_led_update_leds(uint8_t *led, uint8_t color, KineticState_e onoff);
 void kinetic_rgb_led_task(uint8_t *led);
 int	 kinetic_rgb_led_exit();
-void ktd_led_set(int ledpos, uint32_t rgb, bool onoff);
 int	 rgb_led_init();
-
-extern uint8_t _led[12];
 
 #endif /* LDS_KINETIC_RGB_LED_KINETIC_RGB_LED_H_ */

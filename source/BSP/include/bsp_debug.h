@@ -1,5 +1,5 @@
-#ifndef _PD_DEBUG_H_
-#define _PD_DEBUG_H_
+#ifndef _BSP_DEBUG_H_
+#define _BSP_DEBUG_H_
 
 #include <stdio.h>
 #include <stdint.h>
@@ -76,4 +76,4 @@
 #define DPRINT_DGB_ONETIME(fmt, ...)
 #endif /* DBG_PRINT */
 
-#endif /* _PD_DEBUG_H_ */
+#endif /* _BSP_DEBUG_H_ */

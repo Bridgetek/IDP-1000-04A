@@ -12,9 +12,6 @@
 #include <stdbool.h>
 
 #define ROYALBLUE1             0x4876FFUL
-#define RED_COLOR              0xFF0000UL
-#define CYAN                   0x00FFFFUL
-#define ORANGE                 0xFFA500UL
 
 /** @name Definitions for brightness intensity of the RGB LEDs
  */
@@ -85,6 +82,5 @@ void led_strip_selection_both(void);
 bool led_check_color_update(uint32_t color);
 void led_set_last_color(uint32_t color);
 void led_force_update(void);
-void led_color_correction(uint32_t *color, uint8_t intensity);
 
 #endif

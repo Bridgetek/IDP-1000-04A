@@ -28,7 +28,6 @@ typedef struct {
 
 static ResultBuffer results;
 
-uint8_t		 address;
 uint32_t	 io_timeout;
 bool		 did_timeout;
 uint32_t	 timeout_start_ms;
@@ -40,7 +39,6 @@ uint8_t		 saved_vhv_timeout;
 DistanceMode distance_mode;
 RangingData	 ranging_data;
 
-static void setupManualCalibration();
 static void updateDSS();
 static void setupManualCalibration();
 static void getRangingData();

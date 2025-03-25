@@ -138,7 +138,7 @@ int init_bsp(void)
 	sleep_ms(1500);
 	printf("\n\n\n%s" KNRM "\n", APP_TITLE_STR);
 	printf("Build date: %s, %s\n", SW_BUILDDATE_STR, SW_BUILDTIME_STR);
-	printf("PICO_BOARD = %s Rev. %s\n", PICO_BOARD, HWVSN_STR);
+	printf("PICO_BOARD = %s\n", PICO_BOARD);
 	printf("gcc __version__ = %s\n", __VERSION__);
 	printf("pico_sdk_version_string = %s\n", PICO_SDK_VERSION_STRING);
 	// https://forums.raspberrypi.com/viewtopic.php?t=300003

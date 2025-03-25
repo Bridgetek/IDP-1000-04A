@@ -1,12 +1,11 @@
-#ifndef _PD_H_
-#define _PD_H_
+#ifndef _BSP_UTIL_H_
+#define _BSP_UTIL_H_
 
 #include <limits.h>
 #include <time.h>
 #include <pico.h>
 #include <pico/time.h>
 
-#define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
 /* to deprecate powers-of-2 rounding -- it's confusing */
 // #define ROUND_UP_TO_MULTIPLE_OF(multiple_of, x)
 //		(((x) + (multiple_of) - 1) & (-(multiple_of)))
@@ -38,4 +37,4 @@ inline long map(long x, long in_min, long in_max, long out_min, long out_max)
 #define systime_msec()					to_ms_since_boot(get_absolute_time())
 #define msec_expired(PREV_MSEC, PERIOD) (((systime_msec() - (PREV_MSEC)) & UINT_MAX) > (PERIOD))
 
-#endif /* _PD_H_ */
+#endif /* _BSP_UTIL_H_ */

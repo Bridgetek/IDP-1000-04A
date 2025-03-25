@@ -1,19 +1,6 @@
 #ifndef _ALS_H_
 #define _ALS_H_
 
-#define LTR308_GAIN_1  (0)
-#define LTR308_GAIN_3  (1)
-#define LTR308_GAIN_6  (2)
-#define LTR308_GAIN_9  (3)
-#define LTR308_GAIN_18 (4)
-
-#define LTR308_RATE_25MS   (0)
-#define LTR308_RATE_50MS   (1)
-#define LTR308_RATE_100MS  (2)
-#define LTR308_RATE_500MS  (3)
-#define LTR308_RATE_1000MS (4)
-#define LTR308_RATE_2000MS (5)
-
 typedef enum {
 	als_gain_1 = 0,
 	als_gain_3,
@@ -29,15 +16,6 @@ typedef enum {
     als_17bits,
     als_16bits,
 } LTR308_ALS_RES;
-
-typedef enum {
-	als_rate_25ms = 0,
-	als_rate_50ms,
-	als_rate_100ms,
-	als_rate_500ms,
-	als_rate_1000ms,
-	als_rate_2000ms,
-} LTR308_MEAS_RATE;
 
 int als_init();
 int als_setres(LTR308_ALS_RES als_res);
