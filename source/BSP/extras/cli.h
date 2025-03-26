@@ -1,8 +1,5 @@
 /*
  * cli.h
- *
- *  Created on: 4 May 2021
- *      Author: adnan.jalaludin
  */
 
 #ifndef __CLI_H__

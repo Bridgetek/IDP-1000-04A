@@ -1,8 +1,5 @@
 /*
  * bsp_test.c
- *
- *  Created on: 2022-04-08
- *      Author: adnan.jalaludin
  */
 
 #include <pico.h> // incs stdint,stdbool,stddefs,datetime_t

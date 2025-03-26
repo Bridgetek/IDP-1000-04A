@@ -1,7 +1,5 @@
 /*
- * pd40.h
- * File to describe the MCU pinouts, components and drivers used within the
- * PD40 Display Panel hardware
+ * bsp_hwdefs.h.h
  *
  */
 #ifndef _BSP_HWDEFS_H_
@@ -24,7 +22,6 @@
 
 #define RP2040_FLASH_MX25L6433	1
 #define FLASH_SIZE			    (8 * 1048576) // based on MX25L6433F
-#define LFS_SIZE				(4 * 1048576)
 
 #define LCD_WIDTH				1280
 #define LCD_HEIGHT				800
