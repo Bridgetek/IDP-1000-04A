@@ -1,7 +1,7 @@
 # IDP-1000-04A Board Support Package
 
 ## Introduction
-This repository offers hardware support for the IDP-1000-04A platform, excluding the EVE, LCD, and SD card, which are available at https://github.com/Bridgetek/IDP-1000-04A/tree/main/source/Default_firmware. While this BSP can function independently, without EVE support, the LCD will not be operational. A USB console is provided for basic functionality.
+This repository offers hardware support for the IDP-1000-04A platform. This BSP can function independently with a test application. A USB console is provided for basic functionality.
 
 ## Hardware Features
 - RP2040 microcontroller (240kB SRAM, USB, etc) with 8 MByte MX25L6433F serial Flash
@@ -10,6 +10,10 @@ This repository offers hardware support for the IDP-1000-04A platform, excluding
 - KTD2061 LED controller for panel indicator lamps
 - Micro USB port for RP2040
 - Front panel submodule containing ambient light and TOF distance sensors
+- MicroSD card connector for RP2040
+- BT817 EVE GPU display controller with 64 MByte serial Flash
+- 10" LCD TFT LVDS with capacitive touchscreen
+- Buzzer transducer on submodule, for EVE GPU alert sounds
 
 ## Software Features
 The BSP is designed as a support package for devices. Sample usage can be found in *bsp_test.c*
@@ -24,6 +28,8 @@ The BSP is designed as a support package for devices. Sample usage can be found 
         - Ambient light sensor (ALS)
         - Time-of-Flight (TOF) sensor
         - LED controller
+    - SD card device driver & FATFS filesystem library
+    - BT817 EVE GPU device drivers 
 
 2. The initialization results for the hardware peripherals listed above are stored in a single global C structure, ```BSPContexts_t dev_contexts```.
 
@@ -36,8 +42,10 @@ The BSP is designed as a support package for devices. Sample usage can be found 
 ├── drivers          | collection of device drivers for IDP-1000-04A peripherals
 │   ├── als          | LTR-308ALS I2C ambient light sensor
 │   ├── efm8_mio     | I2C-interfaced EFM8 microcontroller used as GPIO expander
+│   ├── eve_hal      | EVE GPU device drivers
 │   ├── i2c_utils    | Helpers for pico-sdk I2C device drivers
 │   ├── led          | KTD2061 LED controller
+│   ├── sdcard       | SD card driver and FATFS filesystem library
 │   └── tof          | VL53L3CX I2C time-of-flight distance sensor
 ├── example_binary   | A pre-compiled binary of this BSP for reference
 ├── extras           | CLI debug terminal sources
@@ -92,3 +100,6 @@ The BSP supports a command-line interface when used with the USB-debug port and 
 - ```rot```      - display rotary value 
 - ```led```      - LED test
 - ```als```      - ALS test
+- ```sd```       - SD card mount detect
+- ```eve```      - show Bridgetek LOGO on LCD screen
+- ```buzzer```   - play a sound via buzzer

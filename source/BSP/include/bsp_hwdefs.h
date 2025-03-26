@@ -62,7 +62,7 @@
 #define KTD2061_PICO_I2C_BUS	i2c1
 #define KTD2061_I2C_ADDR		0x68
 
-#define SD_SPI					spi1    // PD100-ESD uses spi1 for sdcard
+#define SD_SPI					spi1
 #define SD_SCK					10
 #define SD_MOSI					11
 #define SD_MISO					12
@@ -96,16 +96,6 @@
 #define ALS_DEF_LOG_CONSTANT   5.0	  // was 27.059
 #define ALS_DEF_LUX_BREAKPOINT 1254.0 // max lux when LCD at max brightness
 
-/* Common PD-RP2040 GPIO pinouts to display GPU, LCD and RS845 */
-#define EVE_SPI					spi0    // PD100-ESD uses spi0 for GPU
-#define EVE_SCK					2
-#define EVE_MOSI				3
-#define EVE_MISO				4
-#define EVE_IO2					5
-#define EVE_IO3					6
-#define EVE_PDN					7
-#define EVE_CS					14
-
 // clang-format on
 
 typedef enum {
@@ -114,6 +104,8 @@ typedef enum {
 	dvr_als,		  // 0x000004
 	dvr_tof,		  // 0x000008
 	dvr_led,		  // 0x000010
+	dvr_eve,		  // 0x000020
+	dvr_fatfs,		  // 0x000040
 	dvr_max
 } DRIVER_FAILFLAG_BITNUM;
 

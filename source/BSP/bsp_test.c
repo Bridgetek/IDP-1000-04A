@@ -15,22 +15,25 @@
 #include <hardware/watchdog.h>
 #include <hardware/rtc.h>
 
-#include "bsp_hwdefs.h"
 /* Drivers */
 #include "i2c_utils.h"
 #include "efm8_mio.h"
 #include "als.h"
 #include "rgbled.h"
 #include "tof.h"
+#include "sdcard.h"
+#include "eve_app.h"
 
 /* sys utils */
 #include "cli.h"
+
+#include "bsp_hwdefs.h"
 #include "bsp_debug.h"
 #include "bsp_app.h"
 #include "bsp_util.h"
 
 BSPContexts_t  dev_contexts;
-BSPContexts_t*dev_contexts_gptr = &dev_contexts;
+BSPContexts_t* dev_contexts_gptr = &dev_contexts;
 
 #define SW_BUILDDATE_STR __DATE__
 #define SW_BUILDTIME_STR __TIME__
@@ -41,6 +44,8 @@ BSPContexts_t*dev_contexts_gptr = &dev_contexts;
 #define ENABLE_ALS		1
 #define ENABLE_TOF		1
 #define ENABLE_LED		1
+#define ENABLE_SD       1
+#define ENABLE_EVE      1
 
 // Debugging flags & settings
 int dbg_fps_msec = 0;
@@ -229,6 +234,29 @@ int init_bsp(void)
 #endif /* ENABLE_LED */
 
 	watchdog_update();
+
+#ifdef ENABLE_SD
+	if (!loadSdCard()) {
+		ctx->dev_badflags |= (1 << dvr_fatfs);
+		PR_WARN("FATFS mount fail\n");
+	}
+	else {
+		PR_INFO("FATFS mounted\n");
+	}
+#endif /* ENABLE_SD */
+
+#ifdef ENABLE_EVE
+	if (!Gpu_Init())
+	{
+		ctx->dev_badflags |= (1 << dvr_eve);
+		PR_WARN("EVE initial fail\n");
+	}
+	else {
+		PR_INFO("EVE initialised\n");
+	}
+
+	watchdog_update();
+#endif /* ENABLE_EVE */
 
 	return ctx->op_state;
 }

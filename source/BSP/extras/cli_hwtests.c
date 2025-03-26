@@ -17,6 +17,8 @@
 #include "als.h"
 #include "tof.h"
 #include "rgbled.h"
+#include "sdcard.h"
+#include "eve_app.h"
 
 static bool reserved_addr(uint8_t addr)
 {
@@ -77,6 +79,7 @@ int cmd_devices(int argc, char *argv[])
 	printf("TOF distance = %d mm\n", dev->dev_tof_distance);
 	printf("ALS brightness = %d lux\n", dev->dev_als_lux);
 	printf("    auto brightness = %d%%\n", dev->dev_auto_pwm);
+	printf("SD card = %d\n", sdCardReady());
 
 	return 0;
 }
@@ -145,6 +148,33 @@ int cmd_alstest(int argc, char *argv[])
 			exit = true;
 		}
 	} while (!exit);
+
+	return 0;
+}
+
+int cmd_sdcard(int argc, char* argv[])
+{
+	int res = sdCardReady();
+
+	printf("\n%s: SD ready =%d\n", argv[0], res);
+
+	return 0;
+}
+
+int cmd_evelogo(int argc, char* argv[])
+{
+	EVE_logo();
+
+	printf("\nEVE shows LOGO\n");
+
+	return 0;
+}
+
+int cmd_buzzer(int argc, char* argv[])
+{
+	EVE_buzzer();
+
+	printf("\nBuzzer test\n");
 
 	return 0;
 }
