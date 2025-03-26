@@ -56,7 +56,7 @@ The BSP is designed as a support package for devices. Sample usage can be found 
 
 ```
 
-### Depends
+### Software requirement
 - This folder does not include Pico toolchain. For information on downloading, installing, and using the toolchain, please visit https://github.com/raspberrypi/pico-setup-windows. This folder used toolchain version is 1.5.1.
 - GNU Arm Embedded Toolchain for windows
 - cmake =>3.13
