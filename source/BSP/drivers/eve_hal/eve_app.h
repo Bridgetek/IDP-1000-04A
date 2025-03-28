@@ -40,4 +40,5 @@ void Calibration_Restore(void);
 void Calibration_Save(void);
 
 void EVE_logo(void);
+void EVE_buzzer(void);
 #endif /* APP_H_ */
