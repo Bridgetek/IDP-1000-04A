@@ -12,8 +12,9 @@ This repository offers hardware support for the IDP-1000-04A platform. This BSP 
 - Front panel submodule containing ambient light and TOF distance sensors
 - MicroSD card connector for RP2040
 - BT817 EVE GPU display controller with 64 MByte serial Flash
-- 10" LCD TFT LVDS with capacitive touchscreen
+- 10.1" TFT LCD panel with capacitive touchscreen
 - Buzzer transducer on submodule, for EVE GPU alert sounds
+- Custom 8-pin connector for 9-24Vdc power input
 
 ## Software Features
 The BSP is designed as a support package for devices. Sample usage can be found in *bsp_test.c*
@@ -59,7 +60,6 @@ The BSP is designed as a support package for devices. Sample usage can be found 
 ### Software requirement
 - This folder does not include Pico toolchain. For information on downloading, installing, and using the toolchain, please visit https://github.com/raspberrypi/pico-setup-windows. This folder used toolchain version is 1.5.1.
 - GNU Arm Embedded Toolchain for windows
-- cmake =>3.13
 - Visual Studio 2019
 
 ### Build instruction
@@ -72,13 +72,15 @@ $ cp include/bridgetek_idp_1000_04a.h <path to pico-sdk>/pico-sdk/src/boards/inc
 ```
 set(PICO_BOARD "bridgetek_idp_1000_04a")
 ```
-Build:
+*Build:*
+
+Launch the Developer Command Prompt for VS
 ```
 set PICO_SDK_PATH=[path to pico-sdk]
 set PICO_TOOLCHAIN_PATH=[path to GNU Arm Embedded Toolchain\10 2020-q4-major\bin]
 mkdir build
 cd build
-[path to cmake] -G "NMake Makefiles" ..
+cmake -G "NMake Makefiles" ..
 nmake BSP_test
 # The artifact BSP_test.uf2 built can be used to flash the RP2040.
 ```
