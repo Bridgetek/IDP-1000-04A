@@ -61,16 +61,17 @@ Below diagram describe how this folder used in the program:
 
 ## Build instruction
 1. Launch the Developer Command Prompt for VS in Visual Studio
-```
+```console
 set PICO_SDK_PATH=[path to pico-sdk]
 set PICO_TOOLCHAIN_PATH=[path to GNU Arm Embedded Toolchain\10 2020-q4-major\bin]
 cd Default_firmware
 mkdir build
 cd build
-[path to cmake] -D PICO_DEFAULT_BOOT_STAGE2:STRING=boot2_generic_03h -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Debug ..
+# Assume cmake has been added into the PATH environment virable
+cmake -D PICO_DEFAULT_BOOT_STAGE2:STRING=boot2_generic_03h -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Debug ..
 nmake IDP-1000-04A
 ```
-2. .uf file will be generated in __build__ folder
+2. .uf2 file will be generated in __build__ folder
 
 ## Program
 1. While holding the **BOOTSEL** button, connect the board to computer via the USB cable, or alternatively, press the **RESET** button while holding the **BOOTSEL** button, then release the **RESET** button.
